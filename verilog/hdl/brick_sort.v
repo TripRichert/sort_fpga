@@ -72,7 +72,7 @@ module brick_sort
       case (sm) 
 	SM_INIT: sm <= (src_tvalid && src_tready)?SM_SORT:SM_INIT;
 	SM_SORT: sm <= (cnter >= 2*NUM_ELEMS)?SM_EJECT : SM_SORT;
-	SM_EJECT: sm <= SM_INIT;
+	SM_EJECT: sm <= (dest_valid && dest_tready)?SM_INIT:SM_EJECT;
       endcase
 
       case (sm)
