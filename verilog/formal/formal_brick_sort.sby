@@ -1,0 +1,13 @@
+[options]
+mode prove
+
+[engines]
+abc pdr
+
+[script]
+read -formal brick_sort.v formal_brick_sort.v
+prep -top formal_brick_sort
+
+[files]
+brick_sort.v
+formal_brick_sort.v
