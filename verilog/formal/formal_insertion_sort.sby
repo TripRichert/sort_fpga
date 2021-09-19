@@ -1,0 +1,14 @@
+[options]
+mode prove
+
+[engines]
+abc pdr
+
+[script]
+read -formal axistream_pack.v insertion_sort.v formal_insertion_sort.v
+prep -top formal_insertion_sort
+
+[files]
+axistream_pack.v
+insertion_sort.v
+formal_insertion_sort.v
