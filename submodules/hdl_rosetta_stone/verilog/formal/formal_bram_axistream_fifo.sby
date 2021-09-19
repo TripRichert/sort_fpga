@@ -1,0 +1,15 @@
+[options]
+mode prove
+
+[engines]
+abc pdr
+
+[script]
+read -formal blockram.v bram_std_fifo.v bram_axistream_fifo.v formal_bram_axistream_fifo.v
+prep -top formal_bram_axistream_fifo
+
+[files]
+blockram.v
+bram_std_fifo.v
+bram_axistream_fifo.v
+formal_bram_axistream_fifo.v
