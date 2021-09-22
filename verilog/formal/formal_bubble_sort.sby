@@ -1,0 +1,18 @@
+[options]
+mode prove
+
+[engines]
+abc pdr
+
+[script]
+read -formal axistream_pack.v axistream_swapper.v stream_bubble_sort.v bram_axistream_fifo.v bram_std_fifo.v blockram.v formal_bubble_sort.v
+prep -top formal_bubble_sort
+
+[files]
+axistream_pack.v
+blockram.v
+stream_bubble_sort.v
+bram_std_fifo.v
+bram_axistream_fifo.v
+axistream_swapper.v
+formal_bubble_sort.v
